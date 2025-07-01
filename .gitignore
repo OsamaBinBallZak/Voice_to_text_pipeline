@@ -40,8 +40,10 @@ whisper.cpp/models/ggml-*.bin
 whisper.cpp/models/ggml-*.mlmodelc.zip
 whisper.cpp/models/ggml-*.mlmodelc/
 
+# External dependencies
+whisper.cpp/
+
 # Build artifacts
-whisper.cpp/build/
 
 # IDE files
 .vscode/
