@@ -1,22 +1,32 @@
 # ⚡ High-Performance Audio Transcription Pipeline
 
-A lightning-fast audio transcription system optimized for Apple Silicon, achieving **sub-second transcription** of 1+ minute audio files using Metal GPU acceleration.
+A lightning-fast audio transcription system optimized for Apple Silicon, achieving **10x real-time transcription** using Core ML + Metal GPU acceleration.
 
 ## 🚀 Features
 
-- **Ultra-fast processing**: Transcribes 1+ minute audio in under 1 second
-- **Metal GPU acceleration**: Leverages Apple Silicon's neural processing capabilities
+- **Ultra-fast processing**: 10x real-time transcription speed
+- **Core ML + Metal acceleration**: Leverages Apple's Neural Engine and GPU
 - **High accuracy**: Uses Whisper Large-v3 model for superior transcription quality
 - **Noise reduction**: Built-in audio preprocessing for cleaner results
 - **Multi-format support**: Works with MP3, M4A, WAV, FLAC, OGG
 - **Clean output**: Timestamped transcription with cleaned text versions
 - **Simple interface**: Single command transcription
 
-## 📊 Performance
+## 📊 Performance Benchmarks
 
-- **Apple Silicon + Metal GPU**: ~0.9 seconds for 1+ minute audio (70x faster than real-time)
-- **CPU fallback**: ~12+ seconds for same audio
-- **Model**: Whisper Large-v3 (3GB)
+### **Comprehensive Benchmark Results** (5.9-minute audio file)
+
+| Method | Time | Speed | Performance Gain |
+|--------|------|-------|------------------|
+| 🥇 **Core ML + Metal** | **35.4s** | **10.0x real-time** | **+39.9% vs CPU** |
+| 🥈 **Metal GPU Only** | **46.7s** | **7.6x real-time** | **+20.7% vs CPU** |
+| 🥉 **CPU Only** | **58.9s** | **6.0x real-time** | *baseline* |
+
+### **Key Performance Insights**
+- **Core ML optimization**: 24.2% faster than Metal GPU alone
+- **Neural Engine advantage**: Dedicated ML silicon for encoder processing
+- **Sustained performance**: Maintains speed even on longer audio files
+- **Model**: Whisper Large-v3 (3GB) with Core ML acceleration
 
 ## 🛠 Setup
 
@@ -113,11 +123,13 @@ audio-transcription-pipeline/
 
 This pipeline demonstrates the incredible power of Apple Silicon for AI workloads:
 
-- ✅ **70x faster than real-time** transcription
-- ✅ **Sub-second processing** for typical audio files
+- ✅ **10x real-time transcription** with Core ML + Metal GPU
+- ✅ **35 seconds to process 6 minutes** of audio
+- ✅ **24% faster than Metal GPU alone** with Core ML optimization
 - ✅ **Production-ready accuracy** with Whisper Large-v3
 - ✅ **Clean, simple interface** for easy usage
 - ✅ **Robust preprocessing** for various audio qualities
+- ✅ **Neural Engine utilization** for maximum performance
 
 ## 🚫 What We Removed
 

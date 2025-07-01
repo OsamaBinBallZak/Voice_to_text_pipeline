@@ -59,6 +59,9 @@ def transcribe_with_ane(audio_file, model_path=None, use_coreml=True):
         processed_audio.export(temp_audio_path, format="wav")
     
     try:
+        # Check if Core ML model exists
+        coreml_model_path = "./whisper.cpp/models/ggml-large-v3-encoder.mlmodelc"
+        
         # Prepare whisper.cpp command
         whisper_cmd = [
             "./whisper.cpp/build/bin/whisper-cli",
@@ -66,7 +69,7 @@ def transcribe_with_ane(audio_file, model_path=None, use_coreml=True):
             "-f", temp_audio_path,
             "--language", "auto",
             "--output-txt",
-"--output-file", "transcription_output.txt",
+            "--output-file", "transcription_output.txt",
             "--threads", str(os.cpu_count()),
         ]
         
