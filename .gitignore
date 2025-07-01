@@ -1,0 +1,53 @@
+# Virtual environments
+venv/
+coreml_env_new/
+
+# Audio files
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+
+# Transcription output files
+transcription_output*
+*.txt
+*.srt
+*.vtt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# System files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Large model files (keep structure but not the files themselves)
+whisper.cpp/models/ggml-*.bin
+whisper.cpp/models/ggml-*.mlmodelc.zip
+whisper.cpp/models/ggml-*.mlmodelc/
+
+# Build artifacts
+whisper.cpp/build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
